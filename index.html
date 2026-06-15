@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🎰 Sorteo Premium - Edición Gala</title>
   
-  <!-- Tipografías de Prestigio (Serif Clásica y Sans-Serif Limpia) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +49,6 @@
       position: relative;
     }
 
-    /* Botón Superior de Pantalla Completa */
     .fullscreen-trigger {
       position: absolute;
       top: 15px;
@@ -75,7 +73,6 @@
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
     }
 
-    /* Cabecera de Sorteo */
     header {
       text-align: center;
       margin-bottom: 5px;
@@ -117,7 +114,6 @@
       color: var(--gold-primary);
     }
 
-    /* Inputs para edición de títulos en línea */
     .edit-title-input {
       background: rgba(0, 0, 0, 0.6);
       border: 1px solid var(--gold-primary);
@@ -142,7 +138,6 @@
       letter-spacing: 2px;
     }
 
-    /* Layout Ajustado para Pantalla Completa sin Scroll */
     .dashboard {
       width: 100%;
       max-width: 1300px;
@@ -155,7 +150,6 @@
       padding-bottom: 10px;
     }
 
-    /* Paneles Principales */
     .gala-panel {
       background: var(--panel-bg);
       backdrop-filter: blur(20px);
@@ -206,7 +200,6 @@
       justify-content: center;
     }
 
-    /* Campos de Entrada */
     .input-row {
       display: flex;
       justify-content: space-between;
@@ -240,7 +233,6 @@
       box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
     }
 
-    /* Botonera */
     button {
       font-size: 0.7rem;
       padding: 10px 18px;
@@ -276,7 +268,6 @@
       border-color: var(--gold-primary);
     }
 
-    /* Historial de Auditoría Oficial */
     .audit-box {
       background: rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(212, 175, 55, 0.1);
@@ -300,7 +291,6 @@
       border-radius: 2px;
     }
 
-    /* Columna Central: Bolillero Clásico */
     .arena-column {
       display: flex;
       flex-direction: column;
@@ -321,7 +311,6 @@
       cursor: grabbing;
     }
 
-    /* Domo de Sorteos Profesional */
     .bolillero-glass {
       width: 100%;
       height: 100%;
@@ -347,7 +336,6 @@
       border-radius: 50%;
     }
 
-    /* Estructura Soporte Mecánico de Latón */
     .bolillero-stand {
       position: absolute;
       width: 390px;
@@ -376,7 +364,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
 
-    /* Puerta Guillotina de Extracción */
     #puerta {
       width: 70px;
       height: 28px;
@@ -398,7 +385,6 @@
       border-color: #fff;
     }
 
-    /* Botón Sorteador Real */
     .btn-draw {
       font-family: 'Cinzel', serif;
       font-size: 1.4rem;
@@ -423,7 +409,6 @@
       transform: scale(0.98);
     }
 
-    /* Área de Premios */
     .resultados-container {
       width: 100%;
       display: flex;
@@ -442,7 +427,6 @@
       flex-wrap: wrap;
     }
 
-    /* Tarjetas de Premios */
     .resultado-card {
       width: 95px;
       height: 105px;
@@ -509,7 +493,6 @@
       font-weight: 800;
     }
 
-    /* --- EFECTO GALA: PRESENTACIÓN GIGANTE DE BOLILLA SELECCIONADA --- */
     .epic-draw-overlay {
       position: fixed;
       top: 0;
@@ -592,7 +575,6 @@
       transform: translateY(0);
     }
 
-    /* Sistema de Toasts */
     .toast-container {
       position: fixed;
       top: 20px;
@@ -631,7 +613,6 @@
       border-left-color: var(--gold-primary);
     }
 
-    /* Canvas de Celebración */
     #confetti-canvas {
       position: fixed;
       top: 0;
@@ -642,7 +623,6 @@
       z-index: 90;
     }
 
-    /* Responsivo */
     @media (max-width: 950px) {
       html, body { overflow-y: auto; height: auto; }
       body { padding: 15px; }
@@ -670,7 +650,6 @@
 
   <canvas id="confetti-canvas"></canvas>
   
-  <!-- Disparador de pantalla completa -->
   <button class="fullscreen-trigger" id="fullscreen-btn">Pantalla Completa</button>
 
   <header>
@@ -678,10 +657,8 @@
     <div class="subtitle" id="subtitle" title="Un clic para cambiar el subtítulo">Sorteo Oficial</div>
   </header>
 
-  <!-- CONTENEDOR PRINCIPAL -->
   <div class="dashboard">
     
-    <!-- COLUMNA IZQUIERDA: CONTROL DE RANGO -->
     <div class="gala-panel">
       <div class="panel-header">Límites del Sorteo</div>
       <div class="panel-body-content">
@@ -704,7 +681,6 @@
       </div>
     </div>
 
-    <!-- COLUMNA CENTRAL: BOLILLERO MECÁNICO -->
     <div class="arena-column">
       
       <div class="bolillero-container" id="cage-drag-area">
@@ -723,7 +699,6 @@
       </div>
     </div>
 
-    <!-- COLUMNA DERECHA: REGISTRO DE AUDITORÍA -->
     <div class="gala-panel">
       <div class="panel-header">
         <span>Auditoría de Sorteo</span>
@@ -741,7 +716,6 @@
 
   </div>
 
-  <!-- PANTALLA GALA DE BOLILLA EXTRACTADA -->
   <div class="epic-draw-overlay" id="epic-overlay">
     <div class="epic-ball-display" id="epic-ball">
       <span class="epic-ball-num" id="epic-num">??</span>
@@ -767,7 +741,6 @@
     let audioCtx = null;
     let lastBounceTime = 0; 
 
-    // --- ELEMENTOS DEL DOM ---
     const logo = document.getElementById("logo");
     const subtituloElement = document.getElementById("subtitle");
     const btnGuardar = document.getElementById("btn-guardar");
@@ -795,7 +768,6 @@
 
     cantPremiosInput.value = cantidadPremios;
 
-    // --- CARGAR TITULOS PERSONALIZADOS DESDE LOCALSTORAGE ---
     if (localStorage.getItem("custom_sorteo_titulo")) {
       logo.innerText = localStorage.getItem("custom_sorteo_titulo");
     }
@@ -803,7 +775,6 @@
       subtituloElement.innerText = localStorage.getItem("custom_sorteo_sub");
     }
 
-    // --- EDICIÓN DIRECTA DE TÍTULOS AL HACER CLIC ---
     function habilitarEdicionLinea(elemento, storageKey) {
       if (elemento.querySelector("input")) return;
 
@@ -845,7 +816,6 @@
       }
     });
 
-    // --- MANEJO DE PANTALLA COMPLETA ---
     fullscreenBtn.addEventListener("click", () => {
       initAudio();
       if (!document.fullscreenElement) {
@@ -872,7 +842,6 @@
       setTimeout(resizeCanvas, 150);
     });
 
-    // --- LOGS DE AUDITORÍA ---
     function logToTerminal(message, type = "info") {
       const time = new Date().toLocaleTimeString().split(' ')[0];
       let col = "#f3f4f6";
@@ -884,7 +853,6 @@
       terminal.scrollTop = terminal.scrollHeight;
     }
 
-    // --- SINTETIZADOR DE AUDIO ---
     function initAudio() {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -1134,14 +1102,14 @@
           cContext.fillStyle = '#1c1a16';
           
           const numStr = String(this.number);
-          let fontSize = this.radius * 0.85;
+          let fontSize = this.radius * 0.85; 
           
           if (numStr.length === 3) {
-            fontSize = this.radius * 0.65;
+            fontSize = this.radius * 0.60;
           } else if (numStr.length === 4) {
-            fontSize = this.radius * 0.50;
+            fontSize = this.radius * 0.45;
           } else if (numStr.length >= 5) {
-            fontSize = this.radius * 0.40;
+            fontSize = this.radius * 0.35;
           }
 
           cContext.font = `bold ${Math.round(fontSize)}px 'Cinzel', serif`;
@@ -1158,7 +1126,6 @@
       canvas.height = canvas.parentElement.clientHeight;
     }
 
-    // --- LLUVIA DE HOJAS METÁLICAS ---
     let confettiParticles = [];
     let confettiActive = false;
 
@@ -1207,18 +1174,11 @@
       balls = [];
       sparkles = [];
       
-      let maxNumVal = 99;
-      if (listaRango && listaRango.length > 0) {
-        maxNumVal = Math.max(...listaRango);
-      }
-      const maxLen = String(maxNumVal).length;
+      let r = 11; 
       
-      let r = 12; 
-      if (maxLen === 3) r = 14;      
-      else if (maxLen === 4) r = 16; 
-      else if (maxLen >= 5) r = 18;  
-      
-      const totalBolillasVisuales = Math.min(listaRango.length, 55); 
+      // OPTIMIZACIÓN CLAVE: Bajamos la cantidad máxima de bolillas visuales de 55 a 25.
+      // Esto libera espacio adentro del bolillero para que giren y vuelen de forma super realista.
+      const totalBolillasVisuales = Math.min(listaRango.length, 25); 
       const poolMezclado = [...listaRango].sort(() => Math.random() - 0.5);
       
       for (let i = 0; i < totalBolillasVisuales; i++) {
@@ -1368,7 +1328,6 @@
       if (confettiActive) resizeConfetti();
     });
 
-    // --- ACCIONES DE JUEGO ---
     function renderRangoUI() {
       if (listaRango.length > 0) {
         statusRango.innerText = `${listaRango[0]} a ${listaRango[listaRango.length-1]} (${listaRango.length} números)`;
@@ -1445,7 +1404,6 @@
       logToTerminal("[SIS] Restauración general del sistema de sorteo completada.", "warn");
     });
 
-    // --- EXTRACCIÓN REAL 100% TRANSPARENTE ---
     function sortear() {
       if (listaRango.length === 0) {
         showToast("Fije el rango de números primero.", "error");
@@ -1468,7 +1426,6 @@
         if (spinIntensity > 6.0) clearInterval(accel);
       }, 150);
 
-      // Algoritmo puro de azar sin intervención externa
       let poolSorteo = [...listaRango]; 
       let ganadoresElegidos = [];
 
@@ -1476,7 +1433,7 @@
         const indiceRandom = Math.floor(Math.random() * poolSorteo.length);
         const numeroGanador = poolSorteo[indiceRandom];
         ganadoresElegidos.push(numeroGanador);
-        poolSorteo.splice(indiceRandom, 1); // Remueve para evitar duplicados en la misma tirada
+        poolSorteo.splice(indiceRandom, 1); 
       }
 
       const premios = [];
@@ -1497,15 +1454,7 @@
         });
       }
 
-      let maxNumVal = 99;
-      if (listaRango && listaRango.length > 0) {
-        maxNumVal = Math.max(...listaRango);
-      }
-      const maxLen = String(maxNumVal).length;
-      let calculatedExitRadius = 16; 
-      if (maxLen === 3) calculatedExitRadius = 18;
-      else if (maxLen === 4) calculatedExitRadius = 20;
-      else if (maxLen >= 5) calculatedExitRadius = 22;
+      let calculatedExitRadius = 11; 
 
       premios.forEach((premio, index) => {
         const drawDelay = 3500 + (index * 5500);
